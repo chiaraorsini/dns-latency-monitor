@@ -9,24 +9,17 @@ The code keeps track in db stats per domain about:
 * number of queries made so far
 * time stamp of first query made per domain and last query made
 
-
-Refs:
-a. Mysql lib, use mysql++:
-http://tangentsoft.net/mysql++/
-b. DNS lib, use ldns:
-http://www.nlnetlabs.nl/projects/ldns/
-
 Top 10 domains to query:
-	1  google.com	
-	2  facebook.com 
-	3  youtube.com
-	4  yahoo.com 	
-	5  live.com  	
-	6  wikipedia.org 
-	7  baidu.com 	
-	8  blogger.com
-	9  msn.com   	
-    10  qq.com
+1.  google.com
+2.  facebook.com 
+3.  youtube.com
+4.  yahoo.com 
+5.  live.com
+6.  wikipedia.org 
+7.  baidu.com 
+8.  blogger.com
+9.  msn.com 
+10.  qq.com
     
 
     
@@ -45,6 +38,11 @@ then provide the following options to configure:
  CPPFLAGS="-I/path_to_includes"
  LDFLAGS="-I/path_to_libs"
 
+### Requirements 
+a. Mysql lib, use mysql++:
+ * http://tangentsoft.net/mysql++/
+b. DNS lib, use ldns:
+ * http://www.nlnetlabs.nl/projects/ldns/
 
 
 
