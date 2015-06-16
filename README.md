@@ -40,8 +40,10 @@ then provide the following options to configure:
  LDFLAGS="-I/path_to_libs"
 
 ### Requirements 
+
 a. Mysql lib, use mysql++:
  * http://tangentsoft.net/mysql++/
+
 b. DNS lib, use ldns:
  * http://www.nlnetlabs.nl/projects/ldns/
 
