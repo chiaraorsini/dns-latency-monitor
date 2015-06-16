@@ -10,16 +10,16 @@ The code keeps track in db stats per domain about:
 * time stamp of first query made per domain and last query made
 
 Top 10 domains to query: 
-1. google.com
-2. facebook.com
-3. youtube.com
-4. yahoo.com
-5. live.com
-6. wikipedia.org
-7. baidu.com
-8. blogger.com
-9. msn.com
-10. qq.com
+* google.com
+* facebook.com
+* youtube.com
+* yahoo.com
+* live.com
+* wikipedia.org
+* baidu.com
+* blogger.com
+* msn.com
+* qq.com
 
     
 
