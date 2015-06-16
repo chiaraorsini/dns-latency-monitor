@@ -1,0 +1,46 @@
+
+
+
+User:
+	dnsquery	
+
+Database:
+	dns_latency_archive
+
+Tables:
+
+	top_domains
+
+
+
+
+-----------
+
+CREATE TABLE IF NOT EXISTS top_domains ( id MEDIUMINT NOT NULL AUTO_INCREMENT, rank INT NOT NULL, domain TEXT NOT NULL, PRIMARY KEY (id) );
+
+
+INSERT INTO top_domains (rank, domain) VALUES(1,'google.com'),(2,'facebook.com'),(3,'youtube.com'),(4,'yahoo.com'),(5,'live.com'),(6,'wikipedia.org'),(7,'baidu.com'),(8,'blogger.com'),(9,'msn.com'), (10,'qq.com');
+
+
+CREATE TABLE IF NOT EXISTS domain_stats(
+domain_id MEDIUMINT NOT NULL,
+latency_avg FLOAT,
+latency_stdev FLOAT,
+num_succ_queries INT,
+first_ts timestamp NOT NULL,
+last_ts timestamp NOT NULL, 
+PRIMARY KEY (domain_id),
+FOREIGN KEY (domain_id) REFERENCES top_domains(id)
+);
+
+
+CREATE TABLE IF NOT EXISTS dns_queries(
+id MEDIUMINT NOT NULL AUTO_INCREMENT,
+domain_id MEDIUMINT NOT NULL,
+latency FLOAT,
+ts timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+PRIMARY KEY (id),
+FOREIGN KEY (domain_id) REFERENCES top_domains(id)
+);
+
+-----
